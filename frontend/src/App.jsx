@@ -5,39 +5,37 @@ import './App.css'
 import { AreaDropDown } from './components/AreaDropDown'
 import SwitchesGroup from './components/MaleFemaleSwitch'
 import StartButton from './components/StartButton'
-import { HomePage } from './components/pages/HomePage'
 import Distance from './components/DistanceInput'
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./components/Theme";
-import { SelectPage } from './components/pages/SelectPage'
 import { StartTime } from './components/StartTime'
-import { RunnersPage } from './components/pages/RunnersPage'
 import NewRunnerList from './components/NewRunnerList'
 import ParentAreaDropDown from './components/ParentAreaDropDown'
-
-
+import { HomePage } from './components/pages/HomePage.jsx'
+import { RunnersPage } from './components/pages/RunnersPage.jsx'
+import { SelectPage } from './components/pages/SelectPage.jsx'
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
 
   return (
-  <>
-  <ThemeProvider theme={theme}>
-  {/*<HomePage></HomePage>*/}
-   {/*<SelectPage></SelectPage>*/}
-   {/*<AreaDropDown></AreaDropDown>   
-  <SwitchesGroup></SwitchesGroup>
+    <>
+    
+    <ThemeProvider theme={theme}>
 
-  <StartButton></StartButton>
-  <StartTime></StartTime>
-  <Distance></Distance>
-  <RunnersPage></RunnersPage>
-  <NewRunnersList></NewRunnersList>*/}
-  {/*<NewRunnerList></NewRunnerList>*/}
-<ParentAreaDropDown></ParentAreaDropDown>
-<NewRunnerList></NewRunnerList>
-  </ThemeProvider>
+    {/*<Routes>
+      <Route exact path="/" element={ <HomePage></HomePage> } />
+      <Route exact path="/select" element={ <ParentAreaDropDown></ParentAreaDropdown> } />
+      <Route exact path="/runners" element={ <RunnersPage></RunnersPage> } />
+  </Routes>*/}
+    
+    <HomePage></HomePage>
+    <ParentAreaDropDown></ParentAreaDropDown>
+    <NewRunnerList></NewRunnerList>
+
+    </ThemeProvider>
     </>
-  )
+  );
 }
 
 export default App

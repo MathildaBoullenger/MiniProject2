@@ -58,6 +58,7 @@ export const NewRunnersList = ({ area }) => {
   );
 };*/}
 
+
 import React, { useState, useEffect } from "react";
 import NewRunnerCard from "./NewRunnerCard";
 import { StartTime } from "./StartTime";
@@ -87,6 +88,7 @@ const NewRunnerList = (selectedValue) => {
     console.log(runner.suburb === selectedValue);*/}
     return runner.suburb === selectedValue.selectedValue;
   });
+
 console.log(filteredRunners.length);
 
   return (
@@ -101,3 +103,4 @@ console.log(filteredRunners.length);
 };
 
 export default NewRunnerList;
+
