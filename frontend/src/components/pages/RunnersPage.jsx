@@ -1,10 +1,10 @@
 // all components for the homepage
 import { Typography } from "@mui/material";
-import RunnerCard from "../RunnerCard";
+import NewRunnerList from "../NewRunnerList";
 
 export const RunnersPage = () => {
   return (
-<RunnerCard></RunnerCard>
+<NewRunnerList></NewRunnerList>
   )
 }
 

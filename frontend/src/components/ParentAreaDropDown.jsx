@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
-import SelectPage from './SelectPage';
-import NewRunnerCard from './NewRunnerList';
+import {SelectPage} from './pages/SelectPage'
+import NewRunnerList from './NewRunnerList';
 
 const ParentAreaDropDown = () => {
   const [selectedValue, setSelectedValue] = useState(null);
 
   const handleValueChange = (value) => {
     setSelectedValue(value);
+    console.log(value);
   };
 
   return (
     <div>
       <SelectPage onValueChange={handleValueChange} />
-      <NewRunnerCard selectedValue={selectedValue} />
+      <NewRunnerList selectedValue={selectedValue} />
     </div>
   );
 };

@@ -13,6 +13,7 @@ let runners = [
       verified: "yes",
       joined: "12/11/2020",
       nextRunDate: "06/20/2023",
+      image: "https://source.unsplash.com/random"
     }
   ];
 

@@ -95,8 +95,10 @@ export const AreaDropDown = ({ onValueChange }) => {
   const [selectedValue, setSelectedValue] = useState(null);
 
   const handleValueChange = (_, value) => {
+    console.log(_);
+    console.log(value.label);
     setSelectedValue(value);
-    onValueChange?.(value);
+    onValueChange(value.label);
   };
 
   return (

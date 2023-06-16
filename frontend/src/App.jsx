@@ -12,7 +12,9 @@ import theme from "./components/Theme";
 import { SelectPage } from './components/pages/SelectPage'
 import { StartTime } from './components/StartTime'
 import { RunnersPage } from './components/pages/RunnersPage'
-import { NewRunnersList } from './components/NewRunnerList'
+import NewRunnerList from './components/NewRunnerList'
+import ParentAreaDropDown from './components/ParentAreaDropDown'
+
 
 
 function App() {
@@ -21,7 +23,7 @@ function App() {
   <>
   <ThemeProvider theme={theme}>
   {/*<HomePage></HomePage>*/}
-   <SelectPage></SelectPage>
+   {/*<SelectPage></SelectPage>*/}
    {/*<AreaDropDown></AreaDropDown>   
   <SwitchesGroup></SwitchesGroup>
 
@@ -30,7 +32,9 @@ function App() {
   <Distance></Distance>
   <RunnersPage></RunnersPage>
   <NewRunnersList></NewRunnersList>*/}
-  <NewRunnersList></NewRunnersList>
+  {/*<NewRunnerList></NewRunnerList>*/}
+<ParentAreaDropDown></ParentAreaDropDown>
+<NewRunnerList></NewRunnerList>
   </ThemeProvider>
     </>
   )

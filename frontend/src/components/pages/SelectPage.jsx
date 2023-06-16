@@ -6,8 +6,8 @@ import { StartTime } from "../StartTime";
 import MenWomenSwitch from "../MaleFemaleSwitch";
 import FindButton from "../FindButton";
 
-export const SelectPage = () => {
-
+export const SelectPage = ( props ) => {
+console.log(props)
   return (
     <>
       <div className="container">
@@ -19,7 +19,7 @@ export const SelectPage = () => {
             <br></br>
             <div className="select-page-content">
               <div className="dropdown-container">
-              <AreaDropDown />
+              <AreaDropDown onValueChange={props.onValueChange}/>
               </div>
               <div className="date-time-container">
                 <StartTime />

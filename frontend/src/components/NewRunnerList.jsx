@@ -59,12 +59,11 @@ export const NewRunnersList = ({ area }) => {
 };*/}
 
 import React, { useState, useEffect } from "react";
-import { Typography } from "@mui/material";
-import RunnerCard from "./RunnerCard";
+import NewRunnerCard from "./NewRunnerCard";
 import { StartTime } from "./StartTime";
 import { AreaDropDown } from "./AreaDropDown";
 
-export const NewRunnersList = ({ area }) => {
+const NewRunnerList = (selectedValue) => {
   const [runners, setRunners] = useState([]);
 
   useEffect(() => {
@@ -82,15 +81,23 @@ export const NewRunnersList = ({ area }) => {
     };
   }, []);
 
+  const filteredRunners = runners.filter((runner) => {
+   {/*} console.log(runner.suburb, typeof runner.suburb);
+    console.log(selectedValue, typeof selectedValue);
+    console.log(runner.suburb === selectedValue);*/}
+    return runner.suburb === selectedValue.selectedValue;
+  });
+console.log(filteredRunners.length);
+
   return (
     <>
-      <p>Area: {area}</p>
       <div>
-        {runners.map((runner) => (
-          <RunnerCard key={runner.id} runner={runner} />
+        {filteredRunners.map((runner) => (
+          <NewRunnerCard key={runner.id} runner={runner} />
         ))}
       </div>
     </>
   );
 };
 
+export default NewRunnerList;
