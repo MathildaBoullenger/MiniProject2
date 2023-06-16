@@ -1,0 +1,85 @@
+/*Homepage*/
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.background-image-homepage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/jozsef-hocza-BTur1pF9FR0-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  /* Additional background styles */
+}
+
+.start-button {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+
+.title-homepage {
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.subtitle-homepage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+/* Select page */
+
+.select-page-container {
+  width: 75%;
+  height: 100vh;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-page-title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.select-page-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.date-time-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.background-image-select-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/jozsef-hocza-BTur1pF9FR0-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.find-button-container {
+  position: absolute;
+  bottom: 20px; /* Adjust the desired position from the bottom */
+  right: 20px; /* Adjust the desired position from the right */
+}
