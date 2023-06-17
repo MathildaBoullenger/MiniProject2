@@ -108,11 +108,12 @@ export default NewRunnerList;
 import React, { useState, useEffect, useContext } from "react";
 import NewRunnerCard from "./NewRunnerCard";
 import { AreaContext } from "./AreaContext";
-
+import { GenderContext } from "./GenderContext";
 
 const NewRunnerList = () => {
 
   const { selectedValue } = useContext(AreaContext);
+  const { selectedGender } = useContext(GenderContext);
   const [runners, setRunners] = useState([]);
 
   useEffect(() => {
@@ -134,7 +135,7 @@ const NewRunnerList = () => {
    {/* console.log(runner.suburb, typeof runner.suburb);
     console.log(selectedValue, typeof selectedValue);
   console.log(runner.suburb === selectedValue);*/}
-    return runner.suburb === selectedValue.label;
+    return runner.suburb === selectedValue.label && runner.gender === selectedGender
   });
 
 console.log('runners:', runners)

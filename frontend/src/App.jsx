@@ -16,6 +16,7 @@ import { SelectPage } from './components/pages/SelectPage.jsx'
 import { Routes, Route } from 'react-router-dom';
 import { AreaContext } from './components/AreaContext'
 import { AreaProvider } from './components/AreaContext'
+import { GenderProvider } from './components/GenderContext'
 
 function App() {
 
@@ -25,15 +26,17 @@ function App() {
     <ThemeProvider theme={theme}>
 
 <AreaProvider>
+<GenderProvider>
   <Routes>
       <Route exact path="/" element={ <HomePage></HomePage> } />
       <Route exact path="/select" element={ <SelectPage></SelectPage> } />
       <Route exact path="/runners" element={ <RunnersPage></RunnersPage> } />
   </Routes>
+ </GenderProvider> 
  </AreaProvider>    
     
     </ThemeProvider>
-    
+
     </>
   );
 }
