@@ -58,7 +58,7 @@ export const NewRunnersList = ({ area }) => {
   );
 };*/}
 
-
+{/*
 import React, { useState, useEffect } from "react";
 import NewRunnerCard from "./NewRunnerCard";
 import { StartTime } from "./StartTime";
@@ -83,9 +83,9 @@ const NewRunnerList = (selectedValue) => {
   }, []);
 
   const filteredRunners = runners.filter((runner) => {
-   {/*} console.log(runner.suburb, typeof runner.suburb);
+   {/* console.log(runner.suburb, typeof runner.suburb);
     console.log(selectedValue, typeof selectedValue);
-    console.log(runner.suburb === selectedValue);*/}
+    console.log(runner.suburb === selectedValue);
     return runner.suburb === selectedValue.selectedValue;
   });
 
@@ -103,4 +103,54 @@ console.log(filteredRunners.length);
 };
 
 export default NewRunnerList;
+*/}
 
+import React, { useState, useEffect, useContext } from "react";
+import NewRunnerCard from "./NewRunnerCard";
+import { AreaContext } from "./AreaContext";
+
+
+const NewRunnerList = () => {
+
+  const { selectedValue } = useContext(AreaContext);
+  const [runners, setRunners] = useState([]);
+
+  useEffect(() => {
+    let ignore = false;
+
+    fetch("http://localhost:3000")
+      .then((response) => response.json())
+      .then((json) => {
+        !ignore && setRunners(json);
+      })
+      .catch((error) => console.error("Error fetching posts:", error));
+
+    return () => {
+      ignore = true;
+    };
+  }, []);
+
+  const filteredRunners = runners.filter((runner) => {
+   {/* console.log(runner.suburb, typeof runner.suburb);
+    console.log(selectedValue, typeof selectedValue);
+  console.log(runner.suburb === selectedValue);*/}
+    return runner.suburb === selectedValue.label;
+  });
+
+console.log('runners:', runners)
+console.log('filteredRunners:', filteredRunners)
+console.log(filteredRunners.length);
+console.log('selectedValue:', selectedValue)
+
+  return (
+    <>
+      <div>
+        {filteredRunners.map((runner) => (
+          <NewRunnerCard key={runner.id} runner={runner} />
+        ))}
+      </div>
+    </>
+  );
+};
+
+export default NewRunnerList;

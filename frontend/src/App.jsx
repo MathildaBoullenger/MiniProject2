@@ -10,11 +10,12 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "./components/Theme";
 import { StartTime } from './components/StartTime'
 import NewRunnerList from './components/NewRunnerList'
-import ParentAreaDropDown from './components/ParentAreaDropDown'
 import { HomePage } from './components/pages/HomePage.jsx'
 import { RunnersPage } from './components/pages/RunnersPage.jsx'
 import { SelectPage } from './components/pages/SelectPage.jsx'
 import { Routes, Route } from 'react-router-dom';
+import { AreaContext } from './components/AreaContext'
+import { AreaProvider } from './components/AreaContext'
 
 function App() {
 
@@ -29,9 +30,11 @@ function App() {
       <Route exact path="/runners" element={ <RunnersPage></RunnersPage> } />
   </Routes>*/}
     
-    <HomePage></HomePage>
-    <ParentAreaDropDown></ParentAreaDropDown>
-    <NewRunnerList></NewRunnerList>
+    <AreaProvider>
+    <SelectPage />
+    <NewRunnerList />
+    </AreaProvider>
+   
 
     </ThemeProvider>
     </>

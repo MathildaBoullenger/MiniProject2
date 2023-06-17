@@ -5,9 +5,10 @@ import { AreaDropDown } from "../AreaDropDown";
 import { StartTime } from "../StartTime";
 import MenWomenSwitch from "../MaleFemaleSwitch";
 import FindButton from "../FindButton";
+import { AreaContext } from "../AreaContext";
+import { useContext } from "react";
 
-export const SelectPage = ( props ) => {
-console.log(props)
+export const SelectPage = () => {
   return (
     <>
       <div className="container">
@@ -19,7 +20,7 @@ console.log(props)
             <br></br>
             <div className="select-page-content">
               <div className="dropdown-container">
-              <AreaDropDown onValueChange={props.onValueChange}/>
+              <AreaDropDown/>
               </div>
               <div className="date-time-container">
                 <StartTime />

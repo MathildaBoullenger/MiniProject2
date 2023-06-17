@@ -86,7 +86,7 @@ const topAucklandSuburbs = [
 ];*/}
 
 //lifiting State
-
+{/*
 import React, { useState } from 'react';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
@@ -112,9 +112,38 @@ export const AreaDropDown = ({ onValueChange }) => {
       renderInput={(params) => <TextField {...params} label="Auckland Area" />}
     />
   );
+};*/}
+
+import React, { useContext } from 'react';
+import Autocomplete from '@mui/material/Autocomplete';
+import TextField from '@mui/material/TextField';
+import { AreaContext } from './AreaContext';
+
+export const AreaDropDown = () => {
+  const { selectedValue, handleValueChange } = useContext(AreaContext);
+
+  const handleSelectionChange = (_, value) => {
+    console.log(_);
+    console.log(value.label);
+    handleValueChange(value);
+  };
+
+  return (
+    <Autocomplete
+      disablePortal
+      id="combo-box-demo"
+      options={topAucklandSuburbs}
+      sx={{ width: 300 }}
+      value={selectedValue}
+      onChange={handleSelectionChange}
+      renderInput={(params) => <TextField {...params} label="Auckland Area" />}
+    />
+  );
 };
 
+
 const topAucklandSuburbs = [
+  { label: 'Select your area'},
   { label: 'Arch Hill' },
   { label: 'Auckland CBD' },
   { label: 'Avondale' },
