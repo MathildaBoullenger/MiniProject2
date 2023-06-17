@@ -24,19 +24,16 @@ function App() {
     
     <ThemeProvider theme={theme}>
 
-    {/*<Routes>
+<AreaProvider>
+  <Routes>
       <Route exact path="/" element={ <HomePage></HomePage> } />
-      <Route exact path="/select" element={ <ParentAreaDropDown></ParentAreaDropdown> } />
+      <Route exact path="/select" element={ <SelectPage></SelectPage> } />
       <Route exact path="/runners" element={ <RunnersPage></RunnersPage> } />
-  </Routes>*/}
+  </Routes>
+ </AreaProvider>    
     
-    <AreaProvider>
-    <SelectPage />
-    <NewRunnerList />
-    </AreaProvider>
-   
-
     </ThemeProvider>
+    
     </>
   );
 }

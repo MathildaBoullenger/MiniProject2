@@ -1,58 +1,23 @@
 import * as React from 'react';
-import FormLabel from '@mui/material/FormLabel';
-import FormControl from '@mui/material/FormControl';
-import FormGroup from '@mui/material/FormGroup';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import FormHelperText from '@mui/material/FormHelperText';
-import Switch from '@mui/material/Switch';
-import { alpha, styled } from '@mui/material/styles';
-import { pink } from '@mui/material/colors';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
 
-export default function MenWomenSwitch() {
-  const [state, setState] = React.useState({
-    women: false,
-    men: false,
-  });
-
-  const handleChange = (event) => {
-    setState({
-      ...state,
-      [event.target.name]: event.target.checked,
-    });
-  };
-
-  const PinkSwitch = styled(Switch)(({ theme }) => ({
-    '& .MuiSwitch-switchBase.Mui-checked': {
-      color: pink[600],
-      '&:hover': {
-        backgroundColor: alpha(pink[600], theme.palette.action.hoverOpacity),
-      },
-    },
-    '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
-      backgroundColor: pink[600],
-    },
-  }));
-  
-
+export default function RowRadioButtonsGroup() {
   return (
-    <FormControl component="fieldset" variant="standard">
-      <FormLabel component="legend">It's your run! Choose any specifics</FormLabel>
-      <FormGroup aria-label="position" row>
-        <FormControlLabel
-          control={
-            <PinkSwitch checked={state.women} onChange={handleChange} name="women" />
-          }
-          label="Women Only"
-        />
-          <FormControlLabel
-          control={
-            <Switch checked={state.men} onChange={handleChange} name="men" />
-          }
-          label="Men Only"
-        />
-
-      </FormGroup>
-      <FormHelperText>Placeholder text</FormHelperText>
+    <FormControl>
+      <FormLabel id="demo-row-radio-buttons-group-label">Preferences?</FormLabel>
+      <RadioGroup
+        row
+        aria-labelledby="demo-row-radio-buttons-group-label"
+        name="row-radio-buttons-group"
+      >
+        <FormControlLabel value="female" control={<Radio />} label="Show women only" />
+        <FormControlLabel value="male" control={<Radio />} label="Show men only" />
+      
+      </RadioGroup>
     </FormControl>
   );
 }
