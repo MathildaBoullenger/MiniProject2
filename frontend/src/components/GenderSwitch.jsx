@@ -7,7 +7,7 @@ import FormLabel from "@mui/material/FormLabel";
 import { GenderContext } from "./GenderContext";
 import { useContext } from "react";
 
-export default function MaleFemaleSwitch() {
+export default function MenWomenSwitch() {
   const { selectedGender, handleValueChange } = useContext(GenderContext);
 
   const handleSelectionChange = (event) => {
