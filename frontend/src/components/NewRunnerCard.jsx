@@ -1,32 +1,3 @@
-{
-  /*import React from "react";
-import { Typography, Card, CardContent, CardMedia } from "@mui/material";
-
-const RunnerCard = ({ runner }) => {
-  return (
-    <Card sx={{ maxWidth: 345, margin: 10 }} elevation={5}>
-      <CardMedia component="img" height="140" image= {runner.image} alt="avatar" />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {runner.name}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          <strong>Date joined:</strong> {runner.joined}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          <strong>About {runner.name}:</strong> {runner.bio}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          <strong>Area:</strong> {runner.suburb}
-        </Typography>
-      </CardContent>
-    </Card>
-  );
-};
-
-export default RunnerCard;*/
-}
-
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -58,17 +29,11 @@ const RunnerCard = ({ runner }) => {
           </Stack>
           <br></br>
         </div>
-        
-        <Typography
-          variant="body2"
-          sx={{ marginBottom: 1 }}
-        >
+
+        <Typography variant="body2" sx={{ marginBottom: 1 }}>
           <strong>Joined:</strong> {runner.joined}
         </Typography>
-        <Typography
-          variant="body2"
-          sx={{ marginBottom: 1 }}
-        >
+        <Typography variant="body2" sx={{ marginBottom: 1 }}>
           <strong>About {runner.name}:</strong> {runner.bio}
         </Typography>
         <Typography variant="body2">

@@ -1,12 +1,12 @@
-import React from 'react';
-import Button from '@mui/material/Button';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
 
 export default function StartButton() {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/select');
+    navigate("/select");
   };
 
   return (
@@ -16,7 +16,7 @@ export default function StartButton() {
       className="start-button"
       color="primary"
       onClick={handleClick}
-      size="large" 
+      size="large"
     >
       Start
     </Button>

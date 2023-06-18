@@ -12,7 +12,6 @@
   background-image: url('./assets/jozsef-hocza-BTur1pF9FR0-unsplash.jpg');
   background-size: cover;
   background-position: center;
-  /* Additional background styles */
 }
 
 .start-button {
@@ -42,8 +41,8 @@
 /* Select page */
 
 .background-image-select-page {
-  background-color: #f5f5f5; /* Replace with your desired background color */
-  background-image: url('./assets/jozsef-hocza-BTur1pF9FR0-unsplash.jpg'); /* Replace with the path to your background image */
+  background-color: #f5f5f5; 
+  background-image: url('./assets/jozsef-hocza-BTur1pF9FR0-unsplash.jpg');
   background-size: cover;
   background-position: center;
 
@@ -78,8 +77,8 @@
 
 .find-button-container {
   position: absolute;
-  bottom: 20px; /* Adjust the desired position from the bottom */
-  right: 20px; /* Adjust the desired position from the right */
+  bottom: 20px;
+  right: 20px; 
 }
 
 /* Runners page */
@@ -95,15 +94,12 @@
   margin-bottom: 10px;
 }
 
-/* Header styles */
 .runners-page-header {
-
   background-color: #f2f2f2;
   padding: 20px;
   text-align: center;
 }
 
-/* Content styles */
 .runners-page-container {
   width: 100vw;
   height: 100vh;
@@ -117,7 +113,6 @@
   background-position: center;
 }
 
-/* Footer styles */
 .runners-page-footer {
   background-color: #333;
   color: #fff;
