@@ -30,6 +30,7 @@ export const SelectPage = () => {
                 <br></br>
                 <MenWomenSwitch></MenWomenSwitch> 
               </div>  
+              <br></br>
                 <FindButton></FindButton>
           </div>
         </div>

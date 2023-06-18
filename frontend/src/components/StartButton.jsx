@@ -6,7 +6,6 @@ export default function StartButton() {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    // Navigate to the next page
     navigate('/select');
   };
 
@@ -17,6 +16,7 @@ export default function StartButton() {
       className="start-button"
       color="primary"
       onClick={handleClick}
+      size="large" 
     >
       Start
     </Button>

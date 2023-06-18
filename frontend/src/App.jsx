@@ -14,7 +14,6 @@ import { HomePage } from './components/pages/HomePage.jsx'
 import { RunnersPage } from './components/pages/RunnersPage.jsx'
 import { SelectPage } from './components/pages/SelectPage.jsx'
 import { Routes, Route } from 'react-router-dom';
-import { AreaContext } from './components/AreaContext'
 import { AreaProvider } from './components/AreaContext'
 import { GenderProvider } from './components/GenderContext'
 

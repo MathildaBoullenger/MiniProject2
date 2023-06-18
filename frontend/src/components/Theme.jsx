@@ -3,14 +3,14 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#fff", // Replace with your primary color
+      main: "#388E3C ", 
     },
     secondary: {
-      main: "#f50057", // Replace with your secondary color
+      main: "#f2f2f2", 
     },
   },
   typography: {
-    fontFamily: "Roboto, sans-serif", // Replace with your desired font family
+    fontFamily: "Roboto, sans-serif",
   },
 });
 

@@ -6,12 +6,11 @@ export default function FindButton() {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    // Navigate to the next page
     navigate('/runners');
   };
 
   return (
-    <Button variant="contained" disableElevation className="find-button" color="primary" onClick={handleClick}>
+    <Button size="large" variant="contained" disableElevation className="find-button" color="primary" onClick={handleClick}>
       Find
     </Button>
   );

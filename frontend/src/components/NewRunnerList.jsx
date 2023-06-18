@@ -146,22 +146,21 @@ const NewRunnerList = () => {
     });
   }
   
-  
-
 console.log('runners:', runners)
 console.log('filteredRunners:', filteredRunners)
 console.log(filteredRunners.length);
 console.log('selectedValue:', selectedValue)
 
-  return (
-    <>
-      <div>
-        {filteredRunners.map((runner) => (
-          <NewRunnerCard key={runner.id} runner={runner} />
-        ))}
+return (
+  <div className="runner-card-container">
+    {filteredRunners.map((runner) => (
+      <div className="runner-card" key={runner.id}>
+        <NewRunnerCard runner={runner} />
       </div>
-    </>
-  );
-};
+    ))}
+  </div>
+);
+
+    }
 
 export default NewRunnerList;
