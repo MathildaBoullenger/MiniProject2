@@ -143,7 +143,7 @@ export const AreaDropDown = () => {
 
 
 const topAucklandSuburbs = [
-  { label: 'Select your area'},
+  { label: 'Show all areas'},
   { label: 'Arch Hill' },
   { label: 'Auckland CBD' },
   { label: 'Avondale' },

@@ -131,12 +131,22 @@ const NewRunnerList = () => {
     };
   }, []);
 
-  const filteredRunners = runners.filter((runner) => {
-   {/* console.log(runner.suburb, typeof runner.suburb);
-    console.log(selectedValue, typeof selectedValue);
-  console.log(runner.suburb === selectedValue);*/}
-    return runner.suburb === selectedValue.label && runner.gender === selectedGender
-  });
+  
+  let filteredRunners = runners;
+
+  if (selectedValue && selectedValue.label !== 'Show all areas') {
+    filteredRunners = filteredRunners.filter((runner) => {
+      return runner.suburb === selectedValue.label;
+    });
+  }
+  
+  if (selectedGender) {
+    filteredRunners = filteredRunners.filter((runner) => {
+      return runner.gender === selectedGender;
+    });
+  }
+  
+  
 
 console.log('runners:', runners)
 console.log('filteredRunners:', filteredRunners)
