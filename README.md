@@ -1,18 +1,20 @@
 # MiniProject2
 
-Purpose: 
-Connects the user with other runners in their area based on location and gender filter.
+1. Purpose: 
+The purpose of this app is to connect runners with other runners in their area based on location and optional gender filters.
 
-Main code: 
-We broke down the structure into components - components for each element of the page as well as three components representing each page. 
-We use context to share the input data amongst all components. 
-the runners are fetched from an own api in the backend. 
+2. Main code: 
+The runners' data is fetched from our own API in the backend. The frontend consists of individual components such as buttons, dropdowns, and cards. Each page (homepage, select page, and runners page) has its own main component that combines all the necessary components for that page.
 
-There is unused code for 'running' distance and also a hook that captures the start time fot the implementation of future features. 
+We have set up context to access the data retrieved from the dropdown and radio button throughout the entire app. Additionally, we use a theme and provide it to the entire app. Navigation within the app is handled using react-router-dom.
 
-Credits: 
-We used Express for the backend
-React for thr frontend 
+There is some unused code related to "running distance," and we have implemented a hook that captures the start time for future features.
+
+3. Credits: 
+This project utilizes the following technologies and frameworks:
+
+Express for the backend
+React for the frontend
 MUI as a CDN
 
 
