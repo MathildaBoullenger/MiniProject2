@@ -10,5 +10,9 @@ the runners are fetched from an own api in the backend.
 
 There is unused code for 'running' distance and also a hook that captures the start time fot the implementation of future features. 
 
+Credits: 
+We used Express for the backend
+React for thr frontend 
+MUI as a CDN
 
 
